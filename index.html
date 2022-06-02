@@ -591,7 +591,7 @@
       console.log("JSONstring: " + jsonstring);
       console.log("JSONstring length: " + jsonstring.length);
       
-      let jsonstringcompressed = LZString.compressToUTF16(jsonstring);
+      let jsonstringcompressed = LZString.compressToBase64(jsonstring);
       console.log("compressed: " + jsonstringcompressed);
       console.log("compressed length: " + jsonstringcompressed.length);
 

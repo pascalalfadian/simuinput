@@ -610,8 +610,9 @@
         console.log(jsonPecahan);
       	new QRCode(qrDiv, jsonPecahan);
         
-        let qrImg = qrDiv.lastElementChild;
-      	insertAfter(document.createElement('br'),  qrImg);
+        let qrImg = qrdiv.lastElementChild;
+        let br = document.createElement('br');
+        qrImg.parentNode.insertBefore(br, qrImg.nextSibling);
         
       	i++;
       }

@@ -595,7 +595,7 @@
       console.log("compressed: " + jsonstringcompressed);
       console.log("compressed length: " + jsonstringcompressed.length);
       
-      let max = Math.ceil(jsonstringcompressed / 500);
+      let max = Math.ceil(jsonstringcompressed.length / 500);
       console.log(max);
       
       let qrDiv = document.getElementById("qrcode");

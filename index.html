@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulir Sensus Umat SIMU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1>Formulir Data Umat</h1>
+   
+    <form id="form">
+      <fieldset>
+        <legend>Data Diri & Identitas</legend>
+        
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" autocomplete="name" required><br>
+
+        <label for="jenis-kelamin">Jenis Kelamin:</label>
+
+        <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki" required>
+        <label for="laki-laki">Laki-laki</label>
+
+        <input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan" required>
+        <label for="perempuan">Perempuan</label><br>
+
+        <label for="tanggal-kelahiran">Tanggal Kelahiran:</label>
+        <input type="date" id="tanggal-kelahiran" name="tanggal-kelahiran" required>
+        <label for="kota-lahir">Kota Lahir:</label>
+        <input type="text" id="kota-lahir" name="kota-lahir" autocomplete="address-level2" required><br>
+        
+        <datalist id="list-agama">
+    			<option value="Katolik">
+    			<option value="Kristen">
+    			<option value="Buddha">
+    			<option value="Tidak beragama">
+   				<option value="Islam">
+          <option value="Hindu">
+   				<option value="Konghucu">
+  			</datalist>
+        
+        <label for="agama">Agama:</label>
+        <input list="list-agama" name="agama" id="agama" required><br>
+        
+        <datalist id="list-keuskupan">
+    			<option value="Keuskupan Agung Medan">
+    			<option value="Keuskupan Sibolga">
+    			<option value="Keuskupan Padang">
+    			<option value="Keuskupan Agung Palembang">
+          <option value="Keuskupan Pangkalpinang">
+          <option value="Keuskupan Tanjungkarang">
+          <option value="Keuskupan Agung Jakarta">
+          <option value="Keuskupan Bogor">
+          <option value="Keuskupan Bandung">
+          <option value="Keuskupan Agung Semarang">
+          <option value="Keuskupan Purwokerto">
+          <option value="Keuskupan Surabaya">
+          <option value="Keuskupan Malang">
+          <option value="Keuskupan Agung Ende">
+          <option value="Keuskupan Ruteng">
+          <option value="Keuskupan Maumere">
+          <option value="Keuskupan Larantuka">
+          <option value="Keuskupan Denpasar">
+          <option value="Keuskupan Agung Kupang">
+          <option value="Keuskupan Atambua">
+          <option value="Keuskupan Weetebula">
+          <option value="Keuskupan Agung Pontianak">
+          <option value="Keuskupan Sanggau">
+          <option value="Keuskupan Sintang">
+          <option value="Keuskupan Ketapang">
+          <option value="Keuskupan Agung Samarinda">
+          <option value="Keuskupan Palangka Raya">
+          <option value="Keuskupan Banjarmasin">
+          <option value="Keuskupan Tanjung Selor">
+          <option value="Keuskupan Agung Makassar">
+          <option value="Keuskupan Manado">
+          <option value="Keuskupan Amboina">
+          <option value="Keuskupan Merauke">
+          <option value="Keuskupan Agats">
+          <option value="Keuskupan Jayapura">
+          <option value="Keuskupan Timika">
+          <option value="Keuskupan Manokwari-Sorong">
+          <option value="Ordinat Militer Indonesia">
+  			</datalist>
+        
+        <label for="keuskupan">Keuskupan:</label>
+        <input list="list-keuskupan" id="keuskupan" name="keuskupan" required><br>
+        
+        <label for="paroki">Paroki:</label>
+        <input type="text" id="paroki" name="paroki" required><br>
+        <label for="lingkungan">Lingkungan:</label>
+        <input type="text" id="lingkungan" name="lingkungan" required><br>
+      
+        <label for="golongan-darah">Golongan Darah:</label>
+        
+        <input type="radio" id="a" name="golongan-darah" value="a" required>
+        <label for="a">A</label>
+        
+        <input type="radio" id="b" name="golongan-darah" value="b" required>
+        <label for="b">B</label>
+        
+        <input type="radio" id="ab" name="golongan-darah" value="ab" required>
+        <label for="ab">AB</label>
+        
+        <input type="radio" id="o" name="golongan-darah" value="o" required>
+        <label for="o">O</label><br>
+        
+        <label for="ras/suku">Ras / Suku:</label>
+        <input type="text" id="ras/suku" name="ras/suku" required><br>
+        
+        <datalist id="list-kewarganegaraan">
+    			<option value="Indonesia">
+    			<option value="Asing">
+  			</datalist>
+        
+        <label for="kewarganegaraan">Kewarganegaraan:</label>
+        <input list="list-kewarganegaraan" name="kewarganegaraan" id="kewarganegaraan" required><br>
+        
+        <datalist id="list-bahasa">
+    			<option value="Bahasa Indonesia">
+    			<option value="Bahasa Inggris">
+    			<option value="Bahasa Mandarin">
+    			<option value="Bahasa Sunda">
+   				<option value="Bahasa Jawa">
+          <option value="Bahasa Batak">
+  			</datalist>
+        
+        <label for="bahasa">Bahasa Utama:</label>
+        <input list="list-bahasa" id="bahasa" name="bahasa" required><br>
+        
+        <datalist id="list-tipeprotestan">
+    			<option value="Baptis">
+    			<option value="Anglikan">
+          <option value="Protestan">
+          <option value="Lutheran">
+  			</datalist>
+        
+        <label for="tipeprotestan">Tipe Protestan:</label>
+        <input list="list-tipeprotestan" name="tipeprotestan" id="tipeprotestan" required><br>
+                
+        <label for="agama-sebelum">Agama Sebelumnya:</label>
+        <input list="list-agama" name="agama-sebelum" id="agama-sebelum" required><br>
+      
+      </fieldset>
+      
+      <fieldset>
+        <legend>Kontak</legend>
+        
+        <label for="alamat">Alamat:</label>
+      	<input type="text" id="alamat" name="alamat" autocomplete="street-address" required><br>
+        
+        <label for="kabupaten">Kabupaten:</label>
+      	<input type="text" id="kabupaten" name="kabupaten" autocomplete="address-level2" required><br>
+        
+        <label for="kota">Kota:</label>
+      	<input type="text" id="kota" name="kota" autocomplete="address-level2" required><br>
+        
+        <label for="kecamatan">Kecamatan:</label>
+      	<input type="text" id="kecamatan" name="kecamatan" autocomplete="address-level3" required><br>
+        
+        <label for="kelurahan">Kelurahan:</label>
+      	<input type="text" id="kelurahan" name="kelurahan" autocomplete="address-level4" required><br>
+        
+				<label for="rt">RT:</label>
+      	<input type="text" id="rt" name="rt" inputmode="numeric" required><br>
+        
+        <label for="rw">RW:</label>
+      	<input type="text" id="rw" name="rw" inputmode="numeric" required><br>
+        
+        <label for="bulantinggal">Bulan Tinggal:</label>
+      	<input type="text" id="bulantinggal" name="bulantinggal" required><br>
+        
+        <label for="tahuntinggal">Tahun Tinggal:</label>
+      	<input type="text" id="tahuntinggal" name="tahuntinggal" required><br>
+        
+        <label for="notelp">Nomor Telepon:</label>
+      	<input type="tel" id="notelp" name="notelp" required><br>
+        
+        <label for="nohp">Nomor Handphone:</label>
+      	<input type="tel" id="nohp" name="nohp" autocomplete="tel" required><br>
+        
+        <label for="email">Email:</label>
+      	<input type="email" id="email" name="email" autocomplete="email" required><br>
+      </fieldset>
+      
+      <fieldset>
+        <legend>Data Pribadi</legend>
+        
+        <label for="hobi">Hobi:</label>
+      	<input type="text" id="hobi" name="hobi" required><br>
+        
+        <label for="anggota-asuransi">Anggota Asuransi:</label>
+
+        <input type="radio" id="ya-asuransi" name="anggota-asuransi" value="ya-asuransi" required>
+        <label for="ya-asuransi">Ya</label>
+
+        <input type="radio" id="tidak-asuransi" name="anggota-asuransi" value="tidak-asuransi" required>
+        <label for="tidak-asuransi">Tidak</label><br>
+        
+        <datalist id="list-status-kesehatan">
+    			<option value="Normal">
+    			<option value="Gangguan fisik">
+    			<option value="Gangguan Mental">
+  			</datalist>
+        
+        <label for="status-kesehatan">Status Kesehatan:</label>
+        <input list="list-status-kesehatan" name="status-kesehatan" id="status-kesehatan" required><br>
+        
+        <label for="deskripsi-kesehatan">Deskripsi Kesehatan:</label>
+      	<input type="text" id="deskripsi-kesehatan" name="deskripsi-kesehatan" required><br>
+        
+        <label for="cacat-tubuh">Cacat Tubuh:</label>
+      	<input type="text" id="cacat-tubuh" name="cacat-tubuh" required><br>
+        
+        <label for="deskripsi-cacat-tubuh">Deskripsi Cacat Tubuh:</label>
+      	<input type="text" id="deskripsi-cacat-tubuh" name="deskripsi-cacat-tubuh" required><br>
+        
+      </fieldset>
+      
+      <fieldset>
+        <legend>Keluarga</legend>
+        
+				<datalist id="list-perkawinan">
+    			<option value="Kawin">
+    			<option value="Belum Kawin">
+    			<option value="Janda/Duda Mati">
+    			<option value="Pisah">
+   				<option value="Cerai Sipil">
+          <option value="Tidak Kawin">
+  			</datalist>
+        
+        <label for="perkawinan">Status Perkawinan:</label>
+        <input list="list-perkawinan" name="statusperkawinan" id="statusperkawinan" required><br> 
+        
+        
+        <datalist id="list-hubkeluarga">
+    			<option value="Suami">
+    			<option value="Istri">
+    			<option value="Anak Kandung">
+    			<option value="Anak Tiri/Adopsi">
+   				<option value="Anak kost">
+  			</datalist>
+        
+        <label for="hubkeluarga">Status Hubungan Keluarga:</label>
+        <input list="list-hubkeluarga" name="hubkeluarga" id="hubkeluarga" required><br>  
+        
+        <label for="ibukandung">Nama Ibu Kandung:</label>
+        <input type="text" id="ibukandung" name="ibukandung" autocomplete="name" required><br>
+        
+        <label for="ayahkandung">Nama Ayah Kandung:</label>
+        <input type="text" id="ayahkandung" name="ayahkandung" autocomplete="name" required><br>
+        
+        <label for="anakke">Anak ke:</label>
+        <input type="number" id="anakke" name="anakke" required><br>
+        
+        <label for="anggotakeluarga1">Nama Anggota Keluarga 1:</label>
+        <input type="text" id="anggotakeluarga1" name="anggotakeluarga1" autocomplete="name"><br>
+        
+        <label for="anggotakeluarga2">Nama Anggota Keluarga 2:</label>
+        <input type="text" id="anggotakeluarga2" name="anggotakeluarga2" autocomplete="name"><br>
+        
+        <label for="anggotakeluarga3">Nama Anggota Keluarga 3:</label>
+        <input type="text" id="anggotakeluarga3" name="anggotakeluarga3" autocomplete="name"><br>
+        
+        <label for="anggotakeluarga4">Nama Anggota Keluarga 4:</label>
+        <input type="text" id="anggotakeluarga4" name="anggotakeluarga4" autocomplete="name"><br>
+        
+        <label for="anggotakeluarga5">Nama Anggota Keluarga 5:</label>
+        <input type="text" id="anggotakeluarga5" name="anggotakeluarga5" autocomplete="name"><br>
+        
+        <label for="anggotakeluarga6">Nama Anggota Keluarga 6:</label>
+        <input type="text" id="anggotakeluarga6" name="anggotakeluarga6"autocomplete="name"><br>
+      </fieldset>
+      
+      <fieldset>
+        <legend>Sakramen</legend>
+        <h3>BAPTIS</h3>
+        <label for="nomor-surat-baptis">Nomor Surat Baptis:</label>
+      	<input type="number" id="nomor-surat-baptis" name="nomor-surat-baptis" required><br>
+        
+        <label for="nama-baptis">Nama Baptis:</label>
+      	<input type="text" id="nama-baptis" name="nama-baptis" autocomplete="given-name" required><br>
+        
+        <datalist id="list-jenis-baptis">
+    			<option value="Baptis Bayi">
+    			<option value="Baptis Dewasa">
+  			</datalist>
+        
+        <label for="jenis-baptis">Jenis Baptis:</label>
+        <input list="list-jenis-baptis" name="jenis-baptis" id="jenis-baptis" required><br>
+        
+        <label for="agama-sebelum2">Agama Sebelumnya:</label>
+        <input list="list-agama" name="agama-sebelum2" id="agama-sebelum2" required><br>
+        
+        <label for="gereja-baptis">Gereja Baptis:</label>
+      	<input type="text" id="gereja-baptis" name="gereja-baptis" required><br>
+        
+        <label for="tanggal-baptis">Tanggal Baptis:</label>
+      	<input type="date" id="tanggal-baptis" name="tanggal-baptis" required><br>
+        
+        <label for="paroki-baptis">Paroki Baptis:</label>
+      	<input type="text" id="paroki-baptis" name="paroki-baptis" required><br>
+        
+        <label for="kota-baptis">Kota Baptis:</label>
+      	<input type="text" id="kota-baptis" name="kota-baptis" autocomplete="address-level2" required><br>
+        
+        <h3>KOMUNI PERTAMA</h3>
+        <label for="nomor-surat-komuni">Nomor Surat Komuni:</label>
+      	<input type="number" id="nomor-surat-komuni" name="nomor-surat-komuni" required><br>
+        
+        <label for="tanggal-komuni">Tanggal Komuni:</label>
+      	<input type="date" id="tanggal-komuni" name="tanggal-komuni" required><br>
+        
+        <label for="di-gereja">di Gereja:</label>
+      	<input type="text" id="di-gereja" name="di-gereja" required><br>
+        
+        <label for="nama-paroki">Nama Paroki:</label>
+      	<input type="text" id="nama-paroki" name="nama-paroki" required><br>
+        
+        <label for="kota-komuni">Kota:</label>
+      	<input type="text" id="kota-komuni" name="kota-komuni" required autocomplete="address-level2"><br>
+        
+        <h3>PENGUATAN</h3>
+        <label for="nomor-surat-penguatan">No. Surat Penguatan:</label>
+      	<input type="number" id="nomor-surat-penguatan" name="nomor-surat-penguatan" required><br>
+        
+        <label for="tanggal-penguatan">Tanggal Penguatan:</label>
+      	<input type="date" id="tanggal-penguatan" name="tanggal-penguatan" required><br>
+        
+        <label for="nama-penguatan">Nama Penguatan:</label>
+      	<input type="text" id="nama-penguatan" name="nama-penguatan" required><br>
+        
+        <label for="penguatan-di-gereja">di Gereja:</label>
+      	<input type="text" id="penguatan-di-gereja" name="penguatan-di-gereja" required><br>
+        
+        <label for="nama-paroki-penguatan">Nama Paroki:</label>
+      	<input type="text" id="nama-paroki-penguatan" name="nama-paroki-penguatan" required><br>
+        
+        <label for="kota-penguatan">Kota:</label>
+      	<input type="text" id="kota-penguatan" name="kota-penguatan" required autocomplete="address-level2"><br>
+        
+        <h3>PERKAWINAN</h3>
+        <label for="nomor-surat-perkawinan">No. Surat Perkawinan:</label>
+      	<input type="number" id="nomor-surat-perkawinan" name="nomor-surat-perkawinan" required><br>
+        
+        <label for="tanggal-perkawinan">Tanggal Perkawinan:</label>
+      	<input type="date" id="tanggal-perkawinan" name="tanggal-perkawinan" required><br>
+        
+        <label for="perkawinan-di-gereja">di Gereja:</label>
+      	<input type="text" id="perkawinan-di-gereja" name="perkawinan-di-gereja" required><br>
+        
+        <label for="nama-paroki-perkawinan">Nama Paroki:</label>
+      	<input type="text" id="nama-paroki-perkawinan" name="nama-paroki-perkawinan" required><br>
+        
+        <label for="kota-perkawinan">Kota:</label>
+      	<input type="text" id="kota-perkawinan" name="kota-perkawinan" autocomplete="address-level2"required><br>
+        
+        <label for="suami">Suami:</label>
+      	<input type="text" id="suami" name="suami" autocomplete="name" required><br>
+        
+        <label for="istri">Istri:</label>
+      	<input type="text" id="istri" name="istri" autocomplete="name" required><br>
+        
+        <datalist id="list-kategori-perkawinan">
+    			<option value="Katolik">
+    			<option value="Katolik - Kristen">
+          <option value="Katolik - Islam">
+          <option value="Katolik - Buddha">
+          <option value="Katolik - Hindu">
+          <option value="Katolik - Kong hu cu">
+          <option value="Katolik - lainnya">
+  			</datalist>
+        
+        <label for="kategori-perkawinan">Kategori Perkawinan:</label>
+        <input list="list-kategori-perkawinan" name="kategori-perkawinan" id="kategori-perkawinan" required><br>
+        
+      </fieldset>
+      
+      <fieldset>
+        <legend>Pekerjaan & Pendidikan</legend>
+        
+        <label for="">Pekerjaan:</label>
+        <input type="text" id="pekerjaan" name="pekerjaan" required><br>
+        
+        <label for="">Alamat Pekerjaan:</label>
+        <input type="text" id="alamatpekerjaan" name="alamatpekerjaan" autocomplete="street-address"  required><br>
+        
+        <label for="profesi">Profesi:</label>
+        <input type="text" id="profesi" name="profesi" required><br>
+        
+        <label for="profesilain">Profesi Lain:</label>
+        <input type="text" id="profesilain" name="profesilain"><br>
+        
+        <label for="pendapatan">Pendapatan perbulan:</label>
+        <input list="list-pendapatan" name="pendapatan" id="pendapatan" required><br> 
+        
+        
+        <datalist id="list-pendapatan">
+    			<option value="< Rp 500.000,-">
+          <option value="< Rp 1.000.000,-">
+    			<option value="Rp 1.000.000,- s/d Rp 2.000.000,-">
+         	<option value="Rp 2.000.000,- s/d Rp 3.000.000,-">
+    			<option value="Rp 3.000.000,- s/d Rp 4.000.000,-">
+    			<option value="Rp 4.000.000,- s/d Rp 5.000.000,-">
+    			<option value="Rp 5.000.000,- s/d Rp 6.000.000,-">
+  			</datalist>
+        
+        <label for="keahlian">Keahlian/keterampilan:</label>
+        <input type="text" name="keahlian" id="keahlian" required><br> 
+        
+        <datalist id="list-kursusgereja">
+    			<option value="Sedang">
+          <option value="Pernah">
+    			<option value="Tidak Pernah">
+  			</datalist>
+        
+        <label for="kursusgereja">Kursus gereja/pastoral:</label>
+        <input list="list-kursusgereja" name="kursusgereja" id="kursusgereja" required><br> 
+                
+        <label for="jeniskursus">Jenis Kursus:</label>
+        <input type="text" id="jeniskursus" name="jeniskursus" required><br>
+        
+        <label for="pendidikanskrg">Pendidikan Saat Ini:</label>
+        <input list="list-pendidikanskrg" name="pendidikanskrg" id="pendidikanskrg" required><br> 
+        
+        <datalist id="list-pendidikanskrg">
+    			<option value="TK">
+          <option value="SD">
+          <option value="SMP">
+          <option value="SMA">
+          <option value="SMK">
+          <option value="S1">
+          <option value="S2">
+          <option value="S3">
+  			</datalist>
+        
+        <label for="pendidikanterakhir">Pendidikan Terakhir:</label>
+        <input list="list-pendidikanterakhir" name="pendidikanterakhir" id="pendidikanterakhir" required><br> 
+        
+        <datalist id="list-pendidikanterakhir">
+          <option value="SD">
+          <option value="SMP">
+          <option value="SMA">
+          <option value="SMK">
+          <option value="S1">
+          <option value="S2">
+          <option value="S3">
+  			</datalist>
+        
+        <label for="jurusan">Jurusan/Prodi:</label>
+        <input type="text" id="jurusan" name="jurusan" required><br>
+        
+        <label for="namasekolah">Nama Sekolah/Universitas:</label>
+        <input type="text" id="namasekolah" name="namasekolah" required><br>
+        
+        <label for="kotasekolah">di Kota:</label>
+        <input type="text" id="kotasekolah" name="kotasekolah" required autocomplete="address-level2"><br>
+        
+        <label for="alamatsekolah">Alamat:</label>
+        <input type="text" id="alamatsekolah" name="alamatsekolah"autocomplete="street-address"  required><br>
+        
+        <label for="kategorisekolah">Kategori Sekolah/Universitas:</label>
+        <input list="list-kategorisekolah" name="kategorisekolah" id="kategorisekolah" required><br> 
+        
+        <datalist id="list-kategorisekolah">
+          <option value="Katolik">
+          <option value="Kristen">
+          <option value="Negeri">
+          <option value="Swasta">
+  			</datalist>
+      </fieldset>
+      
+      <fieldset>
+        <legend>Aktivitas</legend>
+        
+        <label for="jenisrohaniwan">Jenis Rohaniwan:</label>
+        <input list="list-jenisrohaniwan" name="jenisrohaniwan" id="jenisrohaniwan" required><br> 
+        
+        <datalist id="list-jenisrohaniwan">
+          <option value="Awam">
+          <option value="Pastor">
+          <option value="Suster">
+          <option value="Bruder">
+  			</datalist>
+        
+        <datalist id="list-misa">
+          <option value="Selalu">
+          <option value="Sering">
+          <option value="Jarang/Kadang-kadang">
+          <option value="Tidak pernah">
+  			</datalist>
+        
+        <label for="misaharian">Misa Harian:</label>
+        <input list="list-misa" name="misaharian" id="misaharian" required><br> 
+        
+        <label for="misamingguan">Misa Mingguan:</label>
+        <input list="list-misa" name="misamingguan" id="misamingguan" required><br> 
+        
+        <label for="misaraya">Misa Hari Raya:</label>
+        <input list="list-misa" name="misaraya" id="misaraya" required><br> 
+        
+        <label for="aktifmasy">Aktif di Masyarakat:</label>
+
+        <input type="radio" id="ya-aktif" name="aktifmasy" value="ya" required>
+        <label for="ya-aktif">ya</label>
+
+        <input type="radio" id="tidak-aktif" name="aktifmasy" value="tidak" required>
+        <label for="tidak-aktif">tidak</label>
+        
+        <label for="posisimasy">Posisi di Masyarakat:</label>
+        <input type="text" id="posisimasy" name="posisimasy" required><br>
+        
+        <datalist id="list-aktif">
+          <option value="Sedang">
+          <option value="Pernah">
+          <option value="Tidak pernah">
+  			</datalist>
+        
+        <label for="aktifkeus">Aktif di Keuskupan:</label>
+        <input list="list-aktif" name="aktifkeus" id="aktifkeus" required><br> 
+        
+        <label for="aktifparo">Aktif di Paroki/Stasi:</label>
+        <input list="list-aktif" name="aktifparo" id="aktifparo" required><br>
+        
+        <label for="aktifling">Aktif di Lingkungan:</label>
+        <input list="list-aktif" name="Wilayah" id="aktifling" required><br>
+        
+        <label for="aktifwil">Aktif di Paroki:</label>
+        <input list="list-aktif" name="aktifwil" id="aktifwil" required><br>
+        
+        <label for="petugasliturgi">Petugas Liturgi:</label>
+        <input list="list-aktif" name="petugasliturgi" id="petugasliturgi" required><br>
+        
+        <label for="aktifkat">Aktif di Kategorial:</label>
+
+        <input type="radio" id="ya-aktif" name="aktifkat" value="ya" required>
+        <label for="ya-aktif">ya</label>
+
+        <input type="radio" id="tidak-aktif" name="aktifkat" value="tidak" required>
+        <label for="tidak-aktif">tidak</label>
+        
+        <label for="namakat">Nama Kategorial:</label>
+        <input type="text" id="namakat" name="namakat" required><br>
+        
+      </fieldset>
+      
+      <fieldset>
+        <legend>APK</legend>
+        
+        <label for="menjadi-anggota-apk">Menjadi Anggota APK:</label>
+
+        <input type="radio" id="ikut" name="menjadi-anggota-apk" value="ikut" required>
+        <label for="ikut">Ikut</label>
+
+        <input type="radio" id="tidak-ikut" name="menjadi-anggota-apk" value="tidak-ikut" required>
+        <label for="tidak-ikut">Tidak Ikut</label><br>
+        
+        <label for="nomor-apk">Nomor Apk:</label>
+      	<input type="number" id="nomor-apk" name="nomor-apk" required><br>
+        
+        <label for="tanggal-mulai-apk">Tanggal mulai APK:</label>
+      	<input type="date" id="tanggal-mulai-apk" name="tanggal-mulai-apk" required><br>
+        
+        <label for="status">Status:</label>
+
+        <input type="radio" id="hidup" name="status" value="hidup" required>
+        <label for="hidup">Hidup</label>
+
+        <input type="radio" id="mati" name="status" value="mati" required>
+        <label for="mati">Mati</label><br>
+        
+        <label for="tanggal-kematian">Tanggal Kematian:</label>
+      	<input type="date" id="tanggal-kematian" name="tanggal-kematian" required><br>
+        
+        <label for="pastor-pengurus-kematian">Pastor Pengurus Kematian:</label>
+      	<input type="text" id="pastor-pengurus-kematian" name="pastor-pengurus-kematian" autocomplete="name" required><br>
+      </fieldset>
+      
+      <input type="submit" value="Submit">
+      <div id="qrcode"></div>
+    </form>    
+  </body>
+  
+  <script language="javascript" src="lz-string.js" charset="utf-8"></script>
+  <script language="javascript" src="qrcode.js" charset="utf-8"></script>
+
+  <script type="text/javascript" defer>
+    function handleSubmit(event) {
+      event.preventDefault();
+      let data = new FormData(event.target);
+      let value = Object.fromEntries(data.entries());
+      let jsonstring = JSON.stringify(value);
+      console.log("JSONstring: " + jsonstring);
+      console.log("JSONstring length: " + jsonstring.length);
+      
+      let jsonstringcompressed = LZString.compressToBase64(jsonstring);
+      console.log("compressed: " + jsonstringcompressed);
+      console.log("compressed length: " + jsonstringcompressed.length);
+
+      let qrDiv = document.getElementById("qrcode");
+      let url = "https://christopherwilliambill.github.io/#"+jsonstringcompressed;
+      console.log("url: " + url);
+      console.log("url length: " + url.length);
+      
+      qrDiv.innerHTML = "";
+      new QRCode(qrDiv, url);
+    }
+
+    let form = document.querySelector('form');
+    form.addEventListener('submit', handleSubmit);
+
+    if(window.location.hash) {
+      let hash = window.location.hash.substring(1);
+      let jsonstringdecompressed = JSON.parse(LZString.decompressFromBase64(hash));
+      for (let [key, value] of Object.entries(jsonstringdecompressed) ) {
+        let field = document.getElementById(key);
+        if(field == null){
+          document.getElementById(value).checked = true;
+        }
+        else{
+          field && (field.value = value);
+        }
+      }
+    }
+  </script>
+</html>

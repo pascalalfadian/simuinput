@@ -596,15 +596,17 @@
       console.log("compressed length: " + jsonstringcompressed.length);
       
       let max = Math.ceil(jsonstringcompressed / 500);
+      console.log(max);
+      
+      let qrDiv = document.getElementById("qrcode");
       
       let i = 1;
       while(i <= max){
         let currStr = jsonstringcompressed.substring(0, 501);
         jsonstringcompressed = jsonstringcompressed.substring(501);
         let jsonPecahan = "{seq:"+i+",max:"+ max +","+currStr+"}";
-        
-        let qrDiv = document.getElementById("qrcode");
-      	new QRCode(qrDiv, url);
+        console.log(jsonPecahan);
+      	new QRCode(qrDiv, jsonPecahan);
         
       	i++;
       }

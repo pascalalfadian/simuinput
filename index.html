@@ -585,6 +585,8 @@
   <script language="javascript" src="qrcode.js"></script>
 
   <script type="text/javascript" defer>
+
+    // fungsi yang dipanggil saat tombol submit diklik
     function handleSubmit(event) {
       event.preventDefault();
       let data = new FormData(event.target);
@@ -593,29 +595,29 @@
       console.log("JSONstring: " + jsonstring);
       console.log("JSONstring length: " + jsonstring.length);
       
-      let jsonstringcompressed = LZString.compressToBase64(jsonstring);
+      //mengkompress JSON
+      let jsonstringcompressed = LZString.compressToBase64(jsonstring); 
       console.log("compressed: " + jsonstringcompressed);
       console.log("compressed length: " + jsonstringcompressed.length);
       
-      let max = Math.ceil(jsonstringcompressed.length / 128);
+      // menentukan jumlah qrcode yang dibutuhkan untuk mencakup seluruh data kompresi JSON 
+      // masing-masing qrcode panjangnya 128
+      let max = Math.ceil(jsonstringcompressed.length / 128); 
       console.log(max);
       
       let qrDiv = document.getElementById("qrcode");
-      
-      
+
       let i = 1;
       
       while(i <= max){
+        //membuat string hasil pecahan untuk qrcode
         let currStr = jsonstringcompressed.substring(0, 129);
         jsonstringcompressed = jsonstringcompressed.substring(129);
         let jsonPecahan = "{seq:"+i+",max:"+ max +","+currStr+"}";
         console.log(jsonPecahan);
+
+        //membuat qrcode
       	new QRCode(qrDiv, jsonPecahan);
-        
-        let qrImg = qrDiv.lastElementChild;
-        let br = document.createElement('br');
-        //qrImg.parentNode.insertBefore(br, qrImg.nextSibling);
-        
       	i++;
       }
     }
@@ -623,18 +625,19 @@
     let form = document.querySelector('form');
     form.addEventListener('submit', handleSubmit);
 
-    if(window.location.hash) {
-      let hash = window.location.hash.substring(1);
-      let jsonstringdecompressed = JSON.parse(LZString.decompressFromBase64(hash));
-      for (let [key, value] of Object.entries(jsonstringdecompressed) ) {
-        let field = document.getElementById(key);
-        if(field == null){
-          document.getElementById(value).checked = true;
-        }
-        else{
-          field && (field.value = value);
-        }
-      }
-    }
+    // untuk autofill form saat semua qrcode berhasil discan
+    // if(window.location.hash) {
+    //   let hash = window.location.hash.substring(1);
+    //   let jsonstringdecompressed = JSON.parse(LZString.decompressFromBase64(hash));
+    //   for (let [key, value] of Object.entries(jsonstringdecompressed) ) {
+    //     let field = document.getElementById(key);
+    //     if(field == null){
+    //       document.getElementById(value).checked = true;
+    //     }
+    //     else{
+    //       field && (field.value = value);
+    //     }
+    //   }
+    // }
   </script>
 </html>
